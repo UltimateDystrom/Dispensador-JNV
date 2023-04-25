@@ -1,2 +1,3 @@
 # PaginaWebDispensador
-Proyecto Integrador 2do semestre 
+Proyecto Integrador 2do semestre
+Equipo JNV

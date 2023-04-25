@@ -1,0 +1,234 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"/>
+
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+  <!-- Site Metas -->
+  <meta name="keywords" content=""/>
+  <meta name="description" content=""/>
+  <meta name="author" content=""/>
+
+  <title></title>
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css"/>
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Dosis:400,500|Poppins:400,700&amp;display=swap" rel="stylesheet"/>
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet"/>
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet"/>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body class="sub_page">
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-8">
+            <nav class="navbar navbar-expand-lg custom_nav-container ">
+              <a class="navbar-brand" href="index.html">
+                <span>
+                  BigWing
+                </span>
+              </a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="d-flex  flex-column flex-lg-row align-items-center">
+                  <ul class="navbar-nav  ">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="about.html">About </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="service.html">Services </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="contact.html">Encuesta</a>
+                    </li>
+                  </ul>
+                  <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
+                    <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
+                  </form>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- end header section -->
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+  <div id="nav-placeholder">
+  </div>
+
+  <script>
+    $.get("navigation.html", function(data){
+        $("#nav-placeholder").replaceWith(data);
+    });
+</script> 
+
+  <div class="container">
+      <h1>Cambia esto a lo que tiene que ser 
+        (la info de las graf las cambio yo)
+      </h1>   
+      <p>La purificación es un proceso para poder transformar el agua a potable, todo esto para el consumo humano y de disfrutar lo beneficios que nos da.</p>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum, quae at ipsa eligendi quod dolorum esse placeat voluptates repudiandae illo officia eaque exercitationem rerum ut et provident, enim explicabo vitae!</p>
+  </div>
+  <div class="d-flex justify-content-center">
+      <canvas id="myChart"></canvas>
+      <canvas id="myChart2"></canvas>
+      <canvas id="myChart3"></canvas>
+      <canvas id="myChart4"></canvas>
+  </div>
+  <script>
+      var ctx = document.getElementById('myChart').getContext('2d');
+      var chart = new Chart(ctx, {
+          type: 'doughnut',
+          data: {
+              labels: ['No compro envases de plásticos tengo mi propio envase', '2 a 4 veces por semana', 'Una vez por semana','Todos los días' ],
+              datasets: [{
+                  label: 'Respuestas',
+                  data: [59.8, 12, 22.8, 5.4 ],
+                  
+                  borderWidth: 1
+              }]
+          },
+          options: {
+              responsive: false,
+              scales: {
+                  width: 800,
+                  height: 600,
+                  yAxes: [{
+                      ticks: {
+                          beginAtZero: true
+                      }
+                  }]
+              }
+          }
+      });
+
+      var ctx2 = document.getElementById('myChart2').getContext('2d');
+      var chart2 = new Chart(ctx2, {
+          type: 'doughnut',
+          data:  {
+              labels: ['No compro envases de plásticos tengo mi propio envase', '2 a 4 veces por semana', 'Una vez por semana','Todos los días' ],
+              datasets: [{
+                  label: 'Respuestas',
+                  data: [59.8, 12, 22.8, 5.4 ],
+                  
+                  borderWidth: 1
+              }]
+          },
+              
+          options: {
+              responsive: false,
+              scales: {
+                  width: 800,
+                  height: 600,
+                  yAxes: [{
+                      ticks: {
+                          beginAtZero: true
+                      }
+                  }]
+              }
+          }
+      });
+
+      var ctx3 = document.getElementById('myChart3').getContext('2d');
+      var chart3 = new Chart(ctx3, {
+          type: 'doughnut',
+          data: {
+              labels: ['No compro envases de plásticos tengo mi propio envase', '2 a 4 veces por semana', 'Una vez por semana','Todos los días' ],
+              datasets: [{
+                  label: 'Respuestas',
+                  data: [59.8, 12, 22.8, 5.4 ],
+                  
+                  borderWidth: 1
+              }]
+          },
+          options: {
+              responsive: false,
+              scales: {
+                  width: 800,
+                  height: 600,
+                  yAxes: [{
+                      ticks: {
+                          beginAtZero: true
+                      }
+                  }]
+              }
+          }
+      });
+
+  var ctx = document.getElementById('myChart4').getContext('2d');
+      var chart = new Chart(ctx, {
+          type: 'doughnut',
+          data: {
+              labels: ['No compro envases de plásticos tengo mi propio envase', '2 a 4 veces por semana', 'Una vez por semana','Todos los días' ],
+              datasets: [{
+                  label: 'Respuestas',
+                  data: [59.8, 12, 22.8, 5.4 ],
+                  
+                  borderWidth: 1
+              }]
+          },
+          options: {
+              responsive: false,
+              scales: {
+                  width: 800,
+                  height: 600,
+                  yAxes: [{
+                      ticks: {
+                          beginAtZero: true
+                      }
+                  }]
+              }
+          }
+      });
+  </script> 
+    
+
+
+  <!-- end contact section -->
+  <div class="footer_bg">
+    <!-- info section -->
+    <section class="info_section layout_padding2-bottom">
+      <div class="container">
+        <h3 class="">
+          JNV
+        </h3>
+      </div>
+      <div class="container info_content">
+
+        <div class="d-flex flex-column flex-lg-row justify-content-between align-items-center align-items-lg-baseline">
+          <div class="social-box">
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+</body></html>

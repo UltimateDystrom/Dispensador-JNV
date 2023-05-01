@@ -9,7 +9,7 @@
   <meta name="description" content=""/>
   <meta name="author" content=""/>
 
-  <title></title>
+  <title>Encuesta</title>
 
   <!-- slider stylesheet -->
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css"/>
@@ -26,6 +26,8 @@
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
 <body class="sub_page">
@@ -38,32 +40,29 @@
             <nav class="navbar navbar-expand-lg custom_nav-container ">
               <a class="navbar-brand" href="index.html">
                 <span>
-                  BigWing
+                  JNV
                 </span>
               </a>
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
-               </button>
+              </button>
 
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <div class="d-flex  flex-column flex-lg-row align-items-center">
                   <ul class="navbar-nav  ">
                     <li class="nav-item active">
-                      <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                      <a class="nav-link" href="index.html">Inicio <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="about.html">About </a>
+                      <a class="nav-link" href="subscription.html">Suscripción </a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="service.html">Dispensador </a>
+                      <a class="nav-link" href="dispenser.html">Dispensador </a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="contact.html">Encuesta</a>
+                      <a class="nav-link" href="results.html">Encuesta</a>
                     </li>
                   </ul>
-                  <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
-                    <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
-                  </form>
                 </div>
               </div>
             </nav>
@@ -76,26 +75,35 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 
-  <div id="nav-placeholder">
-  </div>
-
-  <script>
-    $.get("navigation.html", function(data){
-        $("#nav-placeholder").replaceWith(data);
-    });
-</script> 
-
+  <br>
   <div class="container">
-      <h1>Cambia esto a lo que tiene que ser 
-        (la info de las graf las cambio yo)
-      </h1>   
-      <p>La purificación es un proceso para poder transformar el agua a potable, todo esto para el consumo humano y de disfrutar lo beneficios que nos da.</p>
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum, quae at ipsa eligendi quod dolorum esse placeat voluptates repudiandae illo officia eaque exercitationem rerum ut et provident, enim explicabo vitae!</p>
+    <div class="custom_heading-container" data-aos="fade-right" data-aos-duration="3000">
+      <h2>
+        Resultados de Encuesta
+      </h2>
+    </div>
+      <div>
+        <p>Como parte de la inicialización de este proyecto e investigación, se ha realizado una encuesta a estudiantes de la Universidad de Montemorelos sobre el uso de botellas para el consumo de agua. Se obtuvieron 92 respuestas.</p>
+        <p>A continuación se presentan las preguntas y los resultados de la encuesta:</p>
+      </div>
   </div>
-  <div class="d-flex justify-content-center">
+  <div class="container">
+      <h2 data-aos="fade-right" data-aos-duration="1000">¿Qué tan frecuente compra una botella de plástico
+        para el consumo del agua?</h2>
       <canvas id="myChart"></canvas>
+      <br>
+      <br>
+      <h2 data-aos="fade-right" data-aos-duration="1000">¿Usted reutiliza los envases de plástico que compra
+        de agua?</h2>
       <canvas id="myChart2"></canvas>
+      <br>
+      <br>
+      <h2 data-aos="fade-right" data-aos-duration="1000">¿Conoce sobre las 3R 's (reciclar, reutilizar, reducir)?</h2>
       <canvas id="myChart3"></canvas>
+      <br>
+      <br>
+      <h2 data-aos="fade-right" data-aos-duration="1000">¿Usted utiliza los dispensadores de agua que
+        actualmente hay en nuestra universidad?</h2>
       <canvas id="myChart4"></canvas>
   </div>
   <script>
@@ -103,10 +111,10 @@
       var chart = new Chart(ctx, {
           type: 'doughnut',
           data: {
-              labels: ['No compro envases de plásticos tengo mi propio envase', '2 a 4 veces por semana', 'Una vez por semana','Todos los días' ],
+              labels: ['Todos los días', '2 a 4 veces por semana', 'Una vez por semana', 'Tengo mi propio envase'],
               datasets: [{
                   label: 'Respuestas',
-                  data: [59.8, 12, 22.8, 5.4 ],
+                  data: [5.4, 12, 22.8, 59.8],
                   
                   borderWidth: 1
               }]
@@ -129,10 +137,10 @@
       var chart2 = new Chart(ctx2, {
           type: 'doughnut',
           data:  {
-              labels: ['No compro envases de plásticos tengo mi propio envase', '2 a 4 veces por semana', 'Una vez por semana','Todos los días' ],
+              labels: ['Nunca', 'Casi nunca', 'Algunas veces', 'Casi siempre', 'Siempre'],
               datasets: [{
                   label: 'Respuestas',
-                  data: [59.8, 12, 22.8, 5.4 ],
+                  data: [20.7, 18.5, 35.9, 15.2, 9.8],
                   
                   borderWidth: 1
               }]
@@ -156,10 +164,10 @@
       var chart3 = new Chart(ctx3, {
           type: 'doughnut',
           data: {
-              labels: ['No compro envases de plásticos tengo mi propio envase', '2 a 4 veces por semana', 'Una vez por semana','Todos los días' ],
+              labels: ['Sí', 'No'],
               datasets: [{
                   label: 'Respuestas',
-                  data: [59.8, 12, 22.8, 5.4 ],
+                  data: [98.9, 1.1],
                   
                   borderWidth: 1
               }]
@@ -182,10 +190,10 @@
       var chart = new Chart(ctx, {
           type: 'doughnut',
           data: {
-              labels: ['No compro envases de plásticos tengo mi propio envase', '2 a 4 veces por semana', 'Una vez por semana','Todos los días' ],
+              labels: ['Sí', 'No'],
               datasets: [{
                   label: 'Respuestas',
-                  data: [59.8, 12, 22.8, 5.4 ],
+                  data: [63, 37],
                   
                   borderWidth: 1
               }]
@@ -206,29 +214,76 @@
   </script> 
     
 
-
-  <!-- end contact section -->
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
   <div class="footer_bg">
     <!-- info section -->
     <section class="info_section layout_padding2-bottom">
       <div class="container">
         <h3 class="">
-          JNV
+          Dispensador JNV
         </h3>
       </div>
       <div class="container info_content">
 
-        <div class="d-flex flex-column flex-lg-row justify-content-between align-items-center align-items-lg-baseline">
-          <div class="social-box">
+        <div>
+          <div class="row">
+            <div class="col-md-6 col-lg-4">
+              <div class="d-flex">
+                <h5>
+                  Secciones
+                </h5>
+              </div>
+              <div class="d-flex ">
+                <ul>
+                  <li>
+                    <a href="index.html">
+                      Inicio
+                    </a>
+                  </li>
+                  <li>
+                    <a href="subscription.html">
+                      Suscripción
+                    </a>
+                  </li>
+                  <li>
+                    <a href="dispenser.html">
+                      Dispensador
+                    </a>
+                  </li>
+                  <li>
+                    <a href="results.html">
+                      Encuesta
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
     </section>
 
+    <!-- footer section -->
+    <section class="container-fluid footer_section">
+      <p>
+        Hosted with GitHub Pages
+        <br>
+        © 2023 All Rights Reserved
+      </p>
+    </section>
+    <!-- footer section -->
   </div>
 
 
   <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body></html>

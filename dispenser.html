@@ -9,7 +9,7 @@
   <meta name="description" content=""/>
   <meta name="author" content=""/>
 
-  <title>BigWing</title>
+  <title>Dispensador</title>
 
   <!-- slider stylesheet -->
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css"/>
@@ -23,6 +23,8 @@
   <link href="css/style.css" rel="stylesheet"/>
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet"/>
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
 <body class="sub_page">
@@ -35,7 +37,7 @@
             <nav class="navbar navbar-expand-lg custom_nav-container ">
               <a class="navbar-brand" href="index.html">
                 <span>
-                  BigWing
+                  JNV
                 </span>
               </a>
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -46,21 +48,18 @@
                 <div class="d-flex  flex-column flex-lg-row align-items-center">
                   <ul class="navbar-nav  ">
                     <li class="nav-item active">
-                      <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                      <a class="nav-link" href="index.html">Inicio <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="about.html">About </a>
+                      <a class="nav-link" href="subscription.html">Suscripción </a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="service.html">Dispensador </a>
+                      <a class="nav-link" href="dispenser.html">Dispensador </a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="contact.html">Encuesta</a>
+                      <a class="nav-link" href="results.html">Encuesta</a>
                     </li>
                   </ul>
-                  <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
-                    <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
-                  </form>
                 </div>
               </div>
             </nav>
@@ -142,15 +141,44 @@
     <section class="info_section layout_padding2-bottom">
       <div class="container">
         <h3 class="">
-          BigWing
+          Dispensador JNV
         </h3>
       </div>
       <div class="container info_content">
-              <input type="email" placeholder="Enter Your email" id="subscribeMail"/>
-              <button type="submit">
-                Subscribe
-              </button>
-            </form>
+
+        <div>
+          <div class="row">
+            <div class="col-md-6 col-lg-4">
+              <div class="d-flex">
+                <h5>
+                  Secciones
+                </h5>
+              </div>
+              <div class="d-flex ">
+                <ul>
+                  <li>
+                    <a href="index.html">
+                      Inicio
+                    </a>
+                  </li>
+                  <li>
+                    <a href="subscription.html">
+                      Suscripción
+                    </a>
+                  </li>
+                  <li>
+                    <a href="dispenser.html">
+                      Dispensador
+                    </a>
+                  </li>
+                  <li>
+                    <a href="results.html">
+                      Encuesta
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -158,11 +186,13 @@
     </section>
 
     <!-- end info_section -->
+
     <!-- footer section -->
     <section class="container-fluid footer_section">
       <p>
-        © 2019 All Rights Reserved By
-        <a href="https://html.design/">Free Html Templates</a>
+        Hosted with GitHub Pages
+        <br>
+        © 2023 All Rights Reserved
       </p>
     </section>
     <!-- footer section -->
@@ -171,4 +201,8 @@
 
   <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body></html>
